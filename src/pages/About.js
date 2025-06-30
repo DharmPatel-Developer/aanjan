@@ -71,7 +71,7 @@ const About = () => {
               {/* Timeline Item 1 */}
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-spiritual-500 rounded-full flex items-center justify-center text-white font-bold">
-                  1985
+                  1996
                 </div>
                 <Card className="flex-1">
                   <div className="p-6">
@@ -128,51 +128,81 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Team Member 1 */}
+            {/* President */}
             <Card>
               <div className="p-6 text-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80" 
-                  alt="Spiritual Leader" 
-                  className="w-32 h-32 rounded-full mx-auto mb-4"
-                />
-                <h3 className="text-xl font-semibold text-gray-900">{t('spiritual_leader')}</h3>
-                <p className="text-spiritual-500 font-semibold mb-2">Spiritual Guide</p>
-                <p className="text-gray-600">
-                  {t('spiritual_leader_description')}
-                </p>
+                <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-4xl text-gray-400">Photo</span>
+                </div>
+                <p className="text-spiritual-500 font-semibold mb-2">{t('president_post')}</p>
+                <h3 className="text-xl font-semibold text-gray-900">{t('president_name')}</h3>
+                <p className="text-gray-700 mb-1">{t('president_place')}</p>
+                <p className="text-gray-600">{t('president_contact')}</p>
               </div>
             </Card>
 
-            {/* Team Member 2 */}
+            {/* Vice President */}
             <Card>
               <div className="p-6 text-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1556742212-5999572c12b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" 
-                  alt="Community Coordinator" 
-                  className="w-32 h-32 rounded-full mx-auto mb-4"
-                />
-                <h3 className="text-xl font-semibold text-gray-900">{t('community_coordinator')}</h3>
-                <p className="text-spiritual-500 font-semibold mb-2">Community Manager</p>
-                <p className="text-gray-600">
-                  {t('community_coordinator_description')}
-                </p>
+                <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-4xl text-gray-400">Photo</span>
+                </div>
+                <p className="text-spiritual-500 font-semibold mb-2">{t('vice_president_post')}</p>
+                <h3 className="text-xl font-semibold text-gray-900">{t('vice_president_name')}</h3>
+                <p className="text-gray-700 mb-1">{t('vice_president_place')}</p>
+                <p className="text-gray-600">{t('vice_president_contact')}</p>
               </div>
             </Card>
 
-            {/* Team Member 3 */}
+            {/* Secretary */}
             <Card>
               <div className="p-6 text-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" 
-                  alt="Service Director" 
-                  className="w-32 h-32 rounded-full mx-auto mb-4"
-                />
-                <h3 className="text-xl font-semibold text-gray-900">{t('service_director')}</h3>
-                <p className="text-spiritual-500 font-semibold mb-2">Service Lead</p>
-                <p className="text-gray-600">
-                  {t('service_director_description')}
-                </p>
+                <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-4xl text-gray-400">Photo</span>
+                </div>
+                <p className="text-spiritual-500 font-semibold mb-2">{t('secretary_post')}</p>
+                <h3 className="text-xl font-semibold text-gray-900">{t('secretary_name')}</h3>
+                <p className="text-gray-700 mb-1">{t('secretary_place')}</p>
+                <p className="text-gray-600">{t('secretary_contact')}</p>
+              </div>
+            </Card>
+
+            {/* Joint Secretary */}
+            <Card>
+              <div className="p-6 text-center">
+                <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-4xl text-gray-400">Photo</span>
+                </div>
+                <p className="text-spiritual-500 font-semibold mb-2">{t('joint_secretary_post')}</p>
+                <h3 className="text-xl font-semibold text-gray-900">{t('joint_secretary_name')}</h3>
+                <p className="text-gray-700 mb-1">{t('joint_secretary_place')}</p>
+                <p className="text-gray-600">{t('joint_secretary_contact')}</p>
+              </div>
+            </Card>
+
+            {/* Treasurer */}
+            <Card>
+              <div className="p-6 text-center">
+                <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-4xl text-gray-400">Photo</span>
+                </div>
+                <p className="text-spiritual-500 font-semibold mb-2">{t('treasurer_post')}</p>
+                <h3 className="text-xl font-semibold text-gray-900">{t('treasurer_name')}</h3>
+                <p className="text-gray-700 mb-1">{t('treasurer_place')}</p>
+                <p className="text-gray-600">{t('treasurer_contact')}</p>
+              </div>
+            </Card>
+
+            {/* Vice Treasurer */}
+            <Card>
+              <div className="p-6 text-center">
+                <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-4xl text-gray-400">Photo</span>
+                </div>
+                <p className="text-spiritual-500 font-semibold mb-2">{t('vice_treasurer_post')}</p>
+                <h3 className="text-xl font-semibold text-gray-900">{t('vice_treasurer_name')}</h3>
+                <p className="text-gray-700 mb-1">{t('vice_treasurer_place')}</p>
+                <p className="text-gray-600">{t('vice_treasurer_contact')}</p>
               </div>
             </Card>
           </div>
