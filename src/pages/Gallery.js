@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import GalleryItem from '../components/GalleryItem';
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('all');
 
   const galleryItems = [
@@ -10,16 +12,16 @@ const Gallery = () => {
       id: 1,
       type: 'image',
       src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Weekly Satsang Gathering',
-      description: 'Community members gathered for weekly spiritual discourse',
+      title: t('weekly_satsang_gathering'),
+      description: t('weekly_satsang_gathering_desc'),
       category: 'events'
     },
     {
       id: 2,
       type: 'image',
       src: 'https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Meditation Session',
-      description: 'Peaceful meditation in our temple hall',
+      title: t('meditation_session'),
+      description: t('meditation_session_desc'),
       category: 'spiritual'
     },
     {
@@ -27,32 +29,32 @@ const Gallery = () => {
       type: 'video',
       src: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
       thumbnail: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Spiritual Music Evening',
-      description: 'Devotional music and chanting session',
+      title: t('spiritual_music_evening'),
+      description: t('spiritual_music_evening_desc'),
       category: 'events'
     },
     {
       id: 4,
       type: 'image',
       src: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Community Service Day',
-      description: 'Volunteers serving the local community',
+      title: t('community_service_day'),
+      description: t('community_service_day_desc'),
       category: 'service'
     },
     {
       id: 5,
       type: 'image',
       src: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80',
-      title: 'Youth Spiritual Circle',
-      description: 'Young adults exploring spirituality together',
+      title: t('youth_spiritual_circle'),
+      description: t('youth_spiritual_circle_desc'),
       category: 'events'
     },
     {
       id: 6,
       type: 'image',
       src: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Sacred Texts Study',
-      description: 'Group study of ancient wisdom texts',
+      title: t('sacred_texts_study'),
+      description: t('sacred_texts_study_desc'),
       category: 'spiritual'
     },
     {
@@ -60,32 +62,32 @@ const Gallery = () => {
       type: 'video',
       src: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
       thumbnail: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1112&q=80',
-      title: 'Annual Spiritual Conference',
-      description: 'Highlights from our annual gathering',
+      title: t('annual_spiritual_conference'),
+      description: t('annual_spiritual_conference_desc'),
       category: 'events'
     },
     {
       id: 8,
       type: 'image',
       src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Mindfulness Practice',
-      description: 'Outdoor mindfulness and nature connection',
+      title: t('mindfulness_practice'),
+      description: t('mindfulness_practice_desc'),
       category: 'spiritual'
     },
     {
       id: 9,
       type: 'image',
       src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Community Leadership',
-      description: 'Leadership training and development',
+      title: t('community_leadership'),
+      description: t('community_leadership_desc'),
       category: 'service'
     },
     {
       id: 10,
       type: 'image',
       src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
-      title: 'Environmental Stewardship',
-      description: 'Community garden and eco-spiritual practices',
+      title: t('environmental_stewardship'),
+      description: t('environmental_stewardship_desc'),
       category: 'service'
     },
     {
@@ -93,25 +95,25 @@ const Gallery = () => {
       type: 'video',
       src: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
       thumbnail: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Spiritual Teachings',
-      description: 'Weekly wisdom teachings and discussions',
+      title: t('spiritual_teachings'),
+      description: t('spiritual_teachings_desc'),
       category: 'spiritual'
     },
     {
       id: 12,
       type: 'image',
       src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-      title: 'Festival Celebration',
-      description: 'Traditional spiritual festival celebration',
+      title: t('festival_celebration'),
+      description: t('festival_celebration_desc'),
       category: 'events'
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Media' },
-    { id: 'events', name: 'Events' },
-    { id: 'spiritual', name: 'Spiritual Practices' },
-    { id: 'service', name: 'Community Service' }
+    { id: 'all', name: t('all_articles') },
+    { id: 'events', name: t('event_photos') },
+    { id: 'spiritual', name: t('spiritual_moments') },
+    { id: 'service', name: t('community_activities') }
   ];
 
   const filteredItems = activeTab === 'all' 
@@ -124,18 +126,17 @@ const Gallery = () => {
   return (
     <div>
       <Helmet>
-        <title>Gallery - Aanjan Samaj</title>
-        <meta name="description" content="Explore our photo and video gallery showcasing spiritual events, community service, meditation sessions, and temple activities at Aanjan Samaj." />
+        <title>{t('gallery_title')}</title>
+        <meta name="description" content={t('gallery_description')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="bg-spiritual-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Gallery</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t('our_gallery')}</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Witness the beauty of our spiritual community through photos and videos. 
-              Experience the joy, peace, and unity that defines our gatherings and service activities.
+              {t('our_gallery_subtitle')}
             </p>
           </div>
         </div>
@@ -147,15 +148,15 @@ const Gallery = () => {
           <div className="flex justify-center space-x-8">
             <div className="text-center">
               <div className="text-2xl font-bold text-spiritual-600">{imageCount}</div>
-              <div className="text-sm text-gray-600">Photos</div>
+              <div className="text-sm text-gray-600">{t('photos')}</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-spiritual-600">{videoCount}</div>
-              <div className="text-sm text-gray-600">Videos</div>
+              <div className="text-sm text-gray-600">{t('videos')}</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-spiritual-600">{categories.length - 1}</div>
-              <div className="text-sm text-gray-600">Categories</div>
+              <div className="text-sm text-gray-600">{t('categories')}</div>
             </div>
           </div>
         </div>
@@ -190,7 +191,7 @@ const Gallery = () => {
               {categories.find(cat => cat.id === activeTab)?.name}
             </h2>
             <p className="text-gray-600">
-              {filteredItems.length} item{filteredItems.length !== 1 ? 's' : ''} in this category
+              {filteredItems.length} {t('items_in_category', {count: filteredItems.length})}
             </p>
           </div>
           
@@ -206,9 +207,9 @@ const Gallery = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Videos</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('featured_videos')}</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Watch highlights from our spiritual gatherings and community events
+              {t('featured_videos_description')}
             </p>
           </div>
 
@@ -225,14 +226,13 @@ const Gallery = () => {
                 ></iframe>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Weekly Satsang Highlights</h3>
+                <h3 className="text-xl font-semibold mb-2">{t('weekly_satsang_highlights')}</h3>
                 <p className="text-gray-600 mb-4">
-                  Experience the peaceful atmosphere of our weekly spiritual gatherings with 
-                  meditation, discourse, and community bonding.
+                  {t('weekly_satsang_description')}
                 </p>
                 <div className="flex items-center text-sm text-gray-500">
-                  <span className="mr-4">📅 June 2025</span>
-                  <span>👁️ 1.2K views</span>
+                  <span className="mr-4">📅 {t('june_2025')}</span>
+                  <span>👁️ {t('views_count', {count: '1.2K'})}</span>
                 </div>
               </div>
             </div>
@@ -249,14 +249,13 @@ const Gallery = () => {
                 ></iframe>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Community Service Impact</h3>
+                <h3 className="text-xl font-semibold mb-2">{t('community_service_impact')}</h3>
                 <p className="text-gray-600 mb-4">
-                  See how our community service initiatives are making a positive difference 
-                  in the lives of local families and neighborhoods.
+                  {t('community_service_impact_description')}
                 </p>
                 <div className="flex items-center text-sm text-gray-500">
-                  <span className="mr-4">📅 May 2025</span>
-                  <span>👁️ 890 views</span>
+                  <span className="mr-4">📅 {t('may_2025')}</span>
+                  <span>👁️ {t('views_count', {count: '890'})}</span>
                 </div>
               </div>
             </div>
@@ -264,7 +263,7 @@ const Gallery = () => {
 
           <div className="text-center mt-8">
             <button className="bg-spiritual-500 hover:bg-spiritual-600 text-white px-6 py-3 rounded-md font-medium transition-colors">
-              Visit Our YouTube Channel
+              {t('visit_youtube_channel')}
             </button>
           </div>
         </div>
@@ -275,9 +274,9 @@ const Gallery = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-spiritual-50 rounded-lg p-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Share Your Moments</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('share_your_moments')}</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Have beautiful moments from our events or spiritual practices? Share them with our community!
+                {t('share_moments_description')}
               </p>
             </div>
             
@@ -286,30 +285,30 @@ const Gallery = () => {
                 <div className="w-12 h-12 bg-spiritual-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">📸</span>
                 </div>
-                <h3 className="font-semibold mb-2">High Quality</h3>
-                <p className="text-sm text-gray-600">Submit high-resolution photos and clear videos</p>
+                <h3 className="font-semibold mb-2">{t('high_quality')}</h3>
+                <p className="text-sm text-gray-600">{t('high_quality_description')}</p>
               </div>
               
               <div className="text-center">
                 <div className="w-12 h-12 bg-spiritual-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">🎯</span>
                 </div>
-                <h3 className="font-semibold mb-2">Relevant Content</h3>
-                <p className="text-sm text-gray-600">Focus on spiritual and community activities</p>
+                <h3 className="font-semibold mb-2">{t('relevant_content')}</h3>
+                <p className="text-sm text-gray-600">{t('relevant_content_description')}</p>
               </div>
               
               <div className="text-center">
                 <div className="w-12 h-12 bg-spiritual-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">✅</span>
                 </div>
-                <h3 className="font-semibold mb-2">Permission</h3>
-                <p className="text-sm text-gray-600">Ensure consent from all individuals featured</p>
+                <h3 className="font-semibold mb-2">{t('permission')}</h3>
+                <p className="text-sm text-gray-600">{t('permission_description')}</p>
               </div>
             </div>
             
             <div className="text-center mt-8">
               <button className="bg-spiritual-500 hover:bg-spiritual-600 text-white px-6 py-3 rounded-md font-medium transition-colors">
-                Submit Your Photos/Videos
+                {t('submit_photos_videos')}
               </button>
             </div>
           </div>
@@ -319,9 +318,9 @@ const Gallery = () => {
       {/* Social Media */}
       <section className="py-16 bg-spiritual-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Follow Us on Social Media</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('follow_social_media')}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Stay connected and see daily moments from our spiritual community
+            {t('follow_social_media_description')}
           </p>
           
           <div className="flex justify-center space-x-6">

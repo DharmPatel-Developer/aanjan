@@ -1,11 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Card from '../components/Card';
 import EventItem from '../components/EventItem';
 import BlogItem from '../components/BlogItem';
 
 const Home = () => {
+  const { t } = useTranslation();
+
   // Sample data for upcoming events
   const upcomingEvents = [
     {
@@ -57,8 +60,8 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>Home - Aanjan Samaj</title>
-        <meta name="description" content="Welcome to Aanjan Samaj - A spiritual community dedicated to growth, service, and enlightenment." />
+        <title>{t('home_title')}</title>
+        <meta name="description" content={t('home_description')} />
       </Helmet>
 
       {/* Hero Section */}
@@ -66,17 +69,17 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Welcome to Aanjan Samaj
+              {t('welcome_message')}
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              A spiritual community dedicated to fostering inner growth, compassion, and service to humanity
+              {t('welcome_subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/about"
                 className="bg-white text-spiritual-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
               >
-                Learn About Us
+                {t('learn_about_us')}
               </Link>
             </div>
           </div>
@@ -87,9 +90,9 @@ const Home = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Spiritual Highlights</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('spiritual_highlights_title')}</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Discover the core values and practices that guide our spiritual community
+              {t('spiritual_highlights_subtitle')}
             </p>
           </div>
           
@@ -99,9 +102,9 @@ const Home = () => {
                 <div className="w-16 h-16 bg-spiritual-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl">🧘</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Meditation & Mindfulness</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('meditation_mindfulness_title')}</h3>
                 <p className="text-gray-600">
-                  Practice ancient meditation techniques to find inner peace and clarity in daily life.
+                  {t('meditation_mindfulness_description')}
                 </p>
               </div>
             </Card>
@@ -111,9 +114,9 @@ const Home = () => {
                 <div className="w-16 h-16 bg-spiritual-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl">🤝</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Community Service</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('community_service_title')}</h3>
                 <p className="text-gray-600">
-                  Serve others with compassion and contribute to the betterment of our community.
+                  {t('community_service_description')}
                 </p>
               </div>
             </Card>
@@ -123,9 +126,9 @@ const Home = () => {
                 <div className="w-16 h-16 bg-spiritual-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl">📚</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Spiritual Learning</h3>
+                <h3 className="text-xl font-semibold mb-3">{t('spiritual_learning_title')}</h3>
                 <p className="text-gray-600">
-                  Study sacred texts and teachings to deepen your spiritual understanding.
+                  {t('spiritual_learning_description')}
                 </p>
               </div>
             </Card>
@@ -138,14 +141,14 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
-              <p className="text-gray-600">Join us for our spiritual gatherings and community events</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('upcoming_events_title')}</h2>
+              <p className="text-gray-600">{t('upcoming_events_subtitle')}</p>
             </div>
             <Link
               to="/events"
               className="text-spiritual-600 hover:text-spiritual-700 font-medium"
             >
-              View All Events →
+              {t('view_all_events')}
             </Link>
           </div>
           
@@ -162,14 +165,14 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Spiritual Insights</h2>
-              <p className="text-gray-600">Read our latest articles on spirituality and personal growth</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('spiritual_insights_title')}</h2>
+              <p className="text-gray-600">{t('spiritual_insights_subtitle')}</p>
             </div>
             <Link
               to="/blogs"
               className="text-spiritual-600 hover:text-spiritual-700 font-medium"
             >
-              View All Blogs →
+              {t('view_all_blogs')}
             </Link>
           </div>
           

@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import BlogItem from '../components/BlogItem';
 
 const Blogs = () => {
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Articles' },
-    { id: 'spirituality', name: 'Spirituality' },
-    { id: 'meditation', name: 'Meditation' },
-    { id: 'service', name: 'Service' },
-    { id: 'wisdom', name: 'Wisdom' },
-    { id: 'community', name: 'Community' }
+    { id: 'all', name: t('all_articles') },
+    { id: 'spirituality', name: t('spirituality') },
+    { id: 'meditation', name: t('meditation') },
+    { id: 'service', name: t('service') },
+    { id: 'wisdom', name: t('wisdom') },
+    { id: 'community', name: t('community') }
   ];
 
   const blogPosts = [
@@ -114,18 +116,17 @@ const Blogs = () => {
   return (
     <div>
       <Helmet>
-        <title>Spiritual Insights - Aanjan Samaj</title>
-        <meta name="description" content="Read our collection of spiritual articles, meditation guides, and wisdom teachings. Explore topics on spirituality, mindfulness, service, and community." />
+        <title>{t('blogs_title')}</title>
+        <meta name="description" content={t('blogs_description')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="bg-spiritual-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Spiritual Insights</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t('spiritual_insights')}</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our collection of articles on spirituality, meditation, wisdom, and community service. 
-              Find guidance and inspiration for your spiritual journey.
+              {t('spiritual_insights_subtitle_blog')}
             </p>
           </div>
         </div>

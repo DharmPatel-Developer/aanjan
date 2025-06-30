@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import EventItem from '../components/EventItem';
 
 const Events = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('upcoming');
 
   const upcomingEvents = [
@@ -104,146 +106,62 @@ const Events = () => {
   return (
     <div>
       <Helmet>
-        <title>Events - Aanjan Samaj</title>
-        <meta name="description" content="Discover upcoming spiritual events, workshops, and community gatherings at Aanjan Samaj. Join us for meditation, service, and spiritual growth." />
+        <title>{t('events_title')}</title>
+        <meta name="description" content={t('events_description')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="bg-spiritual-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Spiritual Events</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t('our_events')}</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join us for transformative spiritual gatherings, workshops, and community events 
-              designed to nurture your spiritual growth and strengthen our community bonds.
+              {t('our_events_subtitle')}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Event Categories */}
-      <section className="py-8 bg-white border-b">
+      {/* Events Section */}
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center">
-            <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
+          <div className="flex justify-center mb-8">
+            <div className="bg-gray-200 rounded-full p-1 flex space-x-1">
               <button
                 onClick={() => setActiveTab('upcoming')}
-                className={`px-6 py-2 rounded-md font-medium transition-colors ${
-                  activeTab === 'upcoming'
-                    ? 'bg-spiritual-500 text-white'
-                    : 'text-gray-600 hover:text-gray-900'
+                className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors ${
+                  activeTab === 'upcoming' ? 'bg-spiritual-500 text-white' : 'text-gray-600 hover:bg-gray-300'
                 }`}
               >
-                Upcoming Events
+                {t('upcoming_events')}
               </button>
               <button
                 onClick={() => setActiveTab('past')}
-                className={`px-6 py-2 rounded-md font-medium transition-colors ${
-                  activeTab === 'past'
-                    ? 'bg-spiritual-500 text-white'
-                    : 'text-gray-600 hover:text-gray-900'
+                className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors ${
+                  activeTab === 'past' ? 'bg-spiritual-500 text-white' : 'text-gray-600 hover:bg-gray-300'
                 }`}
               >
-                Past Events
+                {t('past_events')}
               </button>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Events Grid */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {activeTab === 'upcoming' && (
-            <div>
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">Upcoming Events</h2>
-                <p className="text-gray-600">Mark your calendar and join us for these spiritual gatherings</p>
-              </div>
-              
+          <div>
+            {activeTab === 'upcoming' && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {upcomingEvents.map((event) => (
                   <EventItem key={event.id} event={event} />
                 ))}
               </div>
-            </div>
-          )}
+            )}
 
-          {activeTab === 'past' && (
-            <div>
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">Past Events</h2>
-                <p className="text-gray-600">Relive the beautiful moments from our previous gatherings</p>
-              </div>
-              
+            {activeTab === 'past' && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {pastEvents.map((event) => (
                   <EventItem key={event.id} event={event} />
                 ))}
               </div>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Event Information */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Event Information</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Important details about attending our events
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 text-center">
-              <div className="w-16 h-16 bg-spiritual-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">📍</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Location</h3>
-              <p className="text-gray-600 text-sm">
-                Most events are held at our Main Temple Complex. 
-                Specific locations are mentioned in each event description.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-6 text-center">
-              <div className="w-16 h-16 bg-spiritual-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🎫</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Registration</h3>
-              <p className="text-gray-600 text-sm">
-                Most events are free and open to all. Some workshops may require 
-                advance registration for proper planning.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-6 text-center">
-              <div className="w-16 h-16 bg-spiritual-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">👕</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">What to Bring</h3>
-              <p className="text-gray-600 text-sm">
-                Comfortable clothing, a meditation cushion if you have one, 
-                and an open heart ready for spiritual growth.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact for Events */}
-      <section className="py-16 bg-spiritual-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Have Questions About Our Events?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Feel free to reach out to us for more information about any of our spiritual gatherings
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-spiritual-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
-              Contact Us
-            </button>
+            )}
           </div>
         </div>
       </section>

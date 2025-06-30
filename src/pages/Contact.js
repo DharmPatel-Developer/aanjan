@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import { useTranslation } from 'react-i18next';
 import Card from "../components/Card";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,10 +33,10 @@ const Contact = () => {
   return (
     <div>
       <Helmet>
-        <title>Contact Us - Aanjan Samaj</title>
+        <title>{t('contact_title')}</title>
         <meta
           name="description"
-          content="Get in touch with Aanjan Samaj. Find our temple address, contact information, and reach out for spiritual guidance or community involvement."
+          content={t('contact_description')}
         />
       </Helmet>
 
@@ -43,10 +45,10 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Contact Us
+              {t('contact_us')}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're here to help you on your spiritual journey. Reach out to us
+              {t('contact_us_subtitle')}
               for guidance, information about our programs, or to get involved
               in our community.
             </p>
@@ -61,7 +63,7 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-bold text-gray-900 mb-8">
-                Get in Touch
+                {t('get_in_touch')}
               </h2>
 
               <div className="space-y-6">
@@ -85,7 +87,7 @@ const Contact = () => {
                       </div>
                       <div className="ml-4">
                         <h3 className="text-lg font-semibold text-gray-900">
-                          Temple Address
+                          {t('address')}
                         </h3>
                         <p className="text-gray-600 mt-1">
                           123 Spiritual Way
@@ -197,7 +199,7 @@ const Contact = () => {
               <Card>
                 <div className="p-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                    Send us a Message
+                    {t('send_message')}
                   </h2>
 
                   {submitted && (
@@ -218,7 +220,7 @@ const Contact = () => {
                           htmlFor="name"
                           className="block text-sm font-medium text-gray-700 mb-2"
                         >
-                          Full Name *
+                          {t('name')} *
                         </label>
                         <input
                           type="text"
@@ -237,7 +239,7 @@ const Contact = () => {
                           htmlFor="email"
                           className="block text-sm font-medium text-gray-700 mb-2"
                         >
-                          Email Address *
+                          {t('email')} *
                         </label>
                         <input
                           type="email"
@@ -258,7 +260,7 @@ const Contact = () => {
                           htmlFor="phone"
                           className="block text-sm font-medium text-gray-700 mb-2"
                         >
-                          Phone Number
+                          {t('phone')}
                         </label>
                         <input
                           type="tel"
@@ -276,7 +278,7 @@ const Contact = () => {
                           htmlFor="subject"
                           className="block text-sm font-medium text-gray-700 mb-2"
                         >
-                          Subject *
+                          {t('subject')} *
                         </label>
                         <select
                           id="subject"
@@ -305,7 +307,7 @@ const Contact = () => {
                         htmlFor="message"
                         className="block text-sm font-medium text-gray-700 mb-2"
                       >
-                        Message *
+                        {t('message')} *
                       </label>
                       <textarea
                         id="message"
