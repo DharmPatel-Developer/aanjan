@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import logo from "../assets/images/logo.png"; // Adjust the path as necessary
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -11,8 +12,12 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-spiritual-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">🕉</span>
+              <div className=" rounded-full flex items-center justify-center">
+                <img
+                  src={logo}
+                  alt="Aanjan Samaj Logo"
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <span className="text-2xl font-bold">{t("title")}</span>
             </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
-
+import logo from "../assets/images/logo.png"; // Adjust the path as necessary
 const Header = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,8 +26,12 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-spiritual-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">🕉</span>
+              <div className=" rounded-full flex items-center justify-center">
+                <img
+                  src={logo}
+                  alt="Aanjan Samaj Logo"
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <span className="text-2xl font-bold text-gray-900">
                 {t("title")}
