@@ -144,5 +144,34 @@
   "spiritual_teachings": "आध्यात्मिक शिक्षाएं",
   "spiritual_teachings_desc": "साप्ताहिक ज्ञान शिक्षाएं और चर्चाएं",
   "festival_celebration": "त्योहार मनाना",
-  "festival_celebration_desc": "पारंपरिक आध्यात्मिक त्योहार मनाना"
+  "festival_celebration_desc": "पारंपरिक आध्यात्मिक त्योहार मनाना",
+  "president_post": "अध्यक्ष",
+  "president_name": "श्री मोहनलाल जी",
+  "president_place": "मुल्की ढाणी",
+  "president_contact": "9821061990",
+
+  "vice_president_post": "उपाध्यक्ष",
+  "vice_president_name": "श्री अणदाराम  जी",
+  "vice_president_place": "खांडी",
+  "vice_president_contact": "9322271905",
+
+  "secretary_post": "सचिव",
+  "secretary_name": "श्री पांचाराम जी",
+  "secretary_place": "नवापुरा",
+  "secretary_contact": "9821207165",
+
+  "joint_secretary_post": "सहसचिव",
+  "joint_secretary_name": "श्री गिरधारीलाल जी",
+  "joint_secretary_place": "अराबा उड़ो",
+  "joint_secretary_contact": "9892112021",
+
+  "treasurer_post": "कोषाध्यक्ष",
+  "treasurer_name": "श्री मंगलाराम जी",
+  "treasurer_place": "चेंडा",
+  "treasurer_contact": "9923714077",
+
+  "vice_treasurer_post": "उपकोषाध्यक्ष",
+  "vice_treasurer_name": "श्री  मोहनराम  जी",
+  "vice_treasurer_place": "झंवर",
+  "vice_treasurer_contact": "9702480432"
 }
