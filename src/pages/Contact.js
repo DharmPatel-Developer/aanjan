@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import Card from "../components/Card";
 
 const Contact = () => {
@@ -33,11 +33,8 @@ const Contact = () => {
   return (
     <div>
       <Helmet>
-        <title>{t('contact_title')}</title>
-        <meta
-          name="description"
-          content={t('contact_description')}
-        />
+        <title>{t("contact_title")}</title>
+        <meta name="description" content={t("contact_description")} />
       </Helmet>
 
       {/* Hero Section */}
@@ -45,10 +42,10 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {t('contact_us')}
+              {t("contact_us")}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('contact_us_subtitle')}
+              {t("contact_us_subtitle")}
               for guidance, information about our programs, or to get involved
               in our community.
             </p>
@@ -63,7 +60,7 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-bold text-gray-900 mb-8">
-                {t('get_in_touch')}
+                {t("get_in_touch")}
               </h2>
 
               <div className="space-y-6">
@@ -87,20 +84,20 @@ const Contact = () => {
                       </div>
                       <div className="ml-4">
                         <h3 className="text-lg font-semibold text-gray-900">
-                          {t('address')}
+                          {t("address")}
                         </h3>
                         <p className="text-gray-600 mt-1">
-                          123 Spiritual Way
+                          Gogte Salt Pan Rd, Vishwakarma Estate
                           <br />
-                          Peace Valley, CA 90210
+                          Vasai West, Tarkhad, Vasai-Virar,
                           <br />
-                          United States
+                          Maharashtra 401202
                         </p>
                       </div>
                     </div>
                   </div>
                 </Card>
-
+                {/* 
                 <Card>
                   <div className="p-6">
                     <div className="flex items-start">
@@ -127,7 +124,7 @@ const Contact = () => {
                       </div>
                     </div>
                   </div>
-                </Card>
+                </Card> */}
 
                 <Card>
                   <div className="p-6">
@@ -199,7 +196,7 @@ const Contact = () => {
               <Card>
                 <div className="p-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                    {t('send_message')}
+                    {t("send_message")}
                   </h2>
 
                   {submitted && (
@@ -220,7 +217,7 @@ const Contact = () => {
                           htmlFor="name"
                           className="block text-sm font-medium text-gray-700 mb-2"
                         >
-                          {t('name')} *
+                          {t("name")} *
                         </label>
                         <input
                           type="text"
@@ -239,7 +236,7 @@ const Contact = () => {
                           htmlFor="email"
                           className="block text-sm font-medium text-gray-700 mb-2"
                         >
-                          {t('email')} *
+                          {t("email")} *
                         </label>
                         <input
                           type="email"
@@ -260,7 +257,7 @@ const Contact = () => {
                           htmlFor="phone"
                           className="block text-sm font-medium text-gray-700 mb-2"
                         >
-                          {t('phone')}
+                          {t("phone")}
                         </label>
                         <input
                           type="tel"
@@ -278,7 +275,7 @@ const Contact = () => {
                           htmlFor="subject"
                           className="block text-sm font-medium text-gray-700 mb-2"
                         >
-                          {t('subject')} *
+                          {t("subject")} *
                         </label>
                         <select
                           id="subject"
@@ -307,7 +304,7 @@ const Contact = () => {
                         htmlFor="message"
                         className="block text-sm font-medium text-gray-700 mb-2"
                       >
-                        {t('message')} *
+                        {t("message")} *
                       </label>
                       <textarea
                         id="message"
@@ -349,7 +346,7 @@ const Contact = () => {
 
           <Card>
             <div className="h-96 bg-gray-200 rounded-lg flex items-center justify-center">
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="w-16 h-16 bg-spiritual-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg
                     className="w-8 h-8 text-spiritual-600"
@@ -372,7 +369,17 @@ const Contact = () => {
                 <button className="bg-spiritual-500 hover:bg-spiritual-600 text-white px-4 py-2 rounded-md font-medium transition-colors">
                   Get Directions
                 </button>
-              </div>
+              </div> */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d458.73755541536764!2d72.82272433081164!3d19.390575508858838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7aeb7582b37f1%3A0x1d4b2e4055e58d46!2sAnjana%20Sanghathan%20Patel%20Samaj%20Seva!5e1!3m2!1sen!2sin!4v1751299910208!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={t("title")}
+              ></iframe>
             </div>
           </Card>
         </div>

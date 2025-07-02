@@ -53,7 +53,9 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/@aanjanapatelsamajvasai3495"
                 className="text-gray-300 hover:text-spiritual-400 transition-colors"
               >
                 <span className="sr-only">YouTube</span>
