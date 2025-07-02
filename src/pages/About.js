@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { useTranslation } from 'react-i18next';
-import Card from '../components/Card';
+import React from "react";
+import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
+import Card from "../components/Card";
 
 const About = () => {
   const { t } = useTranslation();
@@ -9,17 +9,19 @@ const About = () => {
   return (
     <div>
       <Helmet>
-        <title>{t('about_us_title')}</title>
-        <meta name="description" content={t('about_us_description')} />
+        <title>{t("about_us_title")}</title>
+        <meta name="description" content={t("about_us_description")} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="bg-spiritual-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t('about_aanjan_samaj')}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              {t("about_aanjan_samaj")}
+            </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('about_aanjan_samaj_subtitle')}
+              {t("about_aanjan_samaj_subtitle")}
             </p>
           </div>
         </div>
@@ -34,9 +36,11 @@ const About = () => {
                 <div className="w-16 h-16 bg-spiritual-100 rounded-full flex items-center justify-center mb-6">
                   <span className="text-3xl">🎯</span>
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('our_mission')}</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  {t("our_mission")}
+                </h2>
                 <p className="text-gray-600 leading-relaxed">
-                  {t('our_mission_text')}
+                  {t("our_mission_text")}
                 </p>
               </div>
             </Card>
@@ -46,9 +50,11 @@ const About = () => {
                 <div className="w-16 h-16 bg-spiritual-100 rounded-full flex items-center justify-center mb-6">
                   <span className="text-3xl">👁️</span>
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('our_vision')}</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  {t("our_vision")}
+                </h2>
                 <p className="text-gray-600 leading-relaxed">
-                  {t('our_vision_text')}
+                  {t("our_vision_text")}
                 </p>
               </div>
             </Card>
@@ -60,9 +66,11 @@ const About = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('our_history')}</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {t("our_history")}
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              {t('our_history_subtitle')}
+              {t("our_history_subtitle")}
             </p>
           </div>
 
@@ -75,10 +83,10 @@ const About = () => {
                 </div>
                 <Card className="flex-1">
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('foundation')}</h3>
-                    <p className="text-gray-600">
-                      {t('foundation_text')}
-                    </p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {t("foundation")}
+                    </h3>
+                    <p className="text-gray-600">{t("foundation_text")}</p>
                   </div>
                 </Card>
               </div>
@@ -90,9 +98,11 @@ const About = () => {
                 </div>
                 <Card className="flex-1">
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('community_growth')}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {t("community_growth")}
+                    </h3>
                     <p className="text-gray-600">
-                      {t('community_growth_text')}
+                      {t("community_growth_text")}
                     </p>
                   </div>
                 </Card>
@@ -105,10 +115,10 @@ const About = () => {
                 </div>
                 <Card className="flex-1">
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('global_outreach')}</h3>
-                    <p className="text-gray-600">
-                      {t('global_outreach_text')}
-                    </p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {t("global_outreach")}
+                    </h3>
+                    <p className="text-gray-600">{t("global_outreach_text")}</p>
                   </div>
                 </Card>
               </div>
@@ -121,9 +131,11 @@ const About = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('our_team')}</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {t("our_team")}
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              {t('our_team_subtitle')}
+              {t("our_team_subtitle")}
             </p>
           </div>
 
@@ -134,10 +146,13 @@ const About = () => {
                 <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
                   <span className="text-4xl text-gray-400">Photo</span>
                 </div>
-                <p className="text-spiritual-500 font-semibold mb-2">{t('president_post')}</p>
-                <h3 className="text-xl font-semibold text-gray-900">{t('president_name')}</h3>
-                <p className="text-gray-700 mb-1">{t('president_place')}</p>
-                <p className="text-gray-600">{t('president_contact')}</p>
+                <p className="text-spiritual-500 font-semibold mb-2">
+                  {t("president_post")}
+                </p>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {t("president_name")}
+                </h3>
+                <p className="text-gray-700 mb-1">{t("president_place")}</p>
               </div>
             </Card>
 
@@ -147,10 +162,15 @@ const About = () => {
                 <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
                   <span className="text-4xl text-gray-400">Photo</span>
                 </div>
-                <p className="text-spiritual-500 font-semibold mb-2">{t('vice_president_post')}</p>
-                <h3 className="text-xl font-semibold text-gray-900">{t('vice_president_name')}</h3>
-                <p className="text-gray-700 mb-1">{t('vice_president_place')}</p>
-                <p className="text-gray-600">{t('vice_president_contact')}</p>
+                <p className="text-spiritual-500 font-semibold mb-2">
+                  {t("vice_president_post")}
+                </p>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {t("vice_president_name")}
+                </h3>
+                <p className="text-gray-700 mb-1">
+                  {t("vice_president_place")}
+                </p>
               </div>
             </Card>
 
@@ -160,10 +180,13 @@ const About = () => {
                 <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
                   <span className="text-4xl text-gray-400">Photo</span>
                 </div>
-                <p className="text-spiritual-500 font-semibold mb-2">{t('secretary_post')}</p>
-                <h3 className="text-xl font-semibold text-gray-900">{t('secretary_name')}</h3>
-                <p className="text-gray-700 mb-1">{t('secretary_place')}</p>
-                <p className="text-gray-600">{t('secretary_contact')}</p>
+                <p className="text-spiritual-500 font-semibold mb-2">
+                  {t("secretary_post")}
+                </p>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {t("secretary_name")}
+                </h3>
+                <p className="text-gray-700 mb-1">{t("secretary_place")}</p>
               </div>
             </Card>
 
@@ -173,10 +196,15 @@ const About = () => {
                 <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
                   <span className="text-4xl text-gray-400">Photo</span>
                 </div>
-                <p className="text-spiritual-500 font-semibold mb-2">{t('joint_secretary_post')}</p>
-                <h3 className="text-xl font-semibold text-gray-900">{t('joint_secretary_name')}</h3>
-                <p className="text-gray-700 mb-1">{t('joint_secretary_place')}</p>
-                <p className="text-gray-600">{t('joint_secretary_contact')}</p>
+                <p className="text-spiritual-500 font-semibold mb-2">
+                  {t("joint_secretary_post")}
+                </p>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {t("joint_secretary_name")}
+                </h3>
+                <p className="text-gray-700 mb-1">
+                  {t("joint_secretary_place")}
+                </p>
               </div>
             </Card>
 
@@ -186,10 +214,13 @@ const About = () => {
                 <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
                   <span className="text-4xl text-gray-400">Photo</span>
                 </div>
-                <p className="text-spiritual-500 font-semibold mb-2">{t('treasurer_post')}</p>
-                <h3 className="text-xl font-semibold text-gray-900">{t('treasurer_name')}</h3>
-                <p className="text-gray-700 mb-1">{t('treasurer_place')}</p>
-                <p className="text-gray-600">{t('treasurer_contact')}</p>
+                <p className="text-spiritual-500 font-semibold mb-2">
+                  {t("treasurer_post")}
+                </p>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {t("treasurer_name")}
+                </h3>
+                <p className="text-gray-700 mb-1">{t("treasurer_place")}</p>
               </div>
             </Card>
 
@@ -199,10 +230,15 @@ const About = () => {
                 <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
                   <span className="text-4xl text-gray-400">Photo</span>
                 </div>
-                <p className="text-spiritual-500 font-semibold mb-2">{t('vice_treasurer_post')}</p>
-                <h3 className="text-xl font-semibold text-gray-900">{t('vice_treasurer_name')}</h3>
-                <p className="text-gray-700 mb-1">{t('vice_treasurer_place')}</p>
-                <p className="text-gray-600">{t('vice_treasurer_contact')}</p>
+                <p className="text-spiritual-500 font-semibold mb-2">
+                  {t("vice_treasurer_post")}
+                </p>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {t("vice_treasurer_name")}
+                </h3>
+                <p className="text-gray-700 mb-1">
+                  {t("vice_treasurer_place")}
+                </p>
               </div>
             </Card>
           </div>
